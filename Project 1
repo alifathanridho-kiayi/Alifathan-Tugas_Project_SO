@@ -1,0 +1,39 @@
+#Membuat 3 Directory dengan masing masing memiliki subfolder document dan archives 
+
+alifathan@alifathan-VirtualBox:~$ mkdir -p Marketing/{document, archives} Engineering/{document, archives} HR/{document,archives}
+
+
+#Memindahkan Dan BackUp File
+  *Memindahkan 
+alifathan@alifathan-VirtualBox:-$ mv filemarketing.txt Marketing/document
+alifathan@alifathan-VirtualBox:-$ mv fileengineering.jpeg Engineering/document 
+alifathan@alifathan-VirtualBox:~$ mv fileHR.xlsx HR/document
+
+  *BackUp File 
+Aalifathan@alifathan-VirtualBox: $ cp Marketing/document/filemarketing.txt Marketing/archives
+alifathan@alifathan-VirtualBox:~$ cp Engineering/document/fileengineering.jpeg Engineering/archives 
+alifathan@alifathan-VirtualBox:~$ cp HR/document/fileHR.xlsx HR/archives
+
+
+#Menvatur Set Permissions 
+
+*Membuat Group Tiap Directory 
+alifathan@alifathan-VirtualBox:~$ sudo groupadd marketing
+[sudo] password for alifathan:
+alifathan@alifathan-VirtualBox:~$ sudo groupadd engineering
+alifathan@alifathan-VirtualBox:~$ sudo groupadd hr
+
+*Mengelompokkan Group Sesuai Directory 
+alifathan@alifathan-VirtualBox: $ sudo chown -R :marketing Marketing 
+alifathan@alifathan-VirtualBox:~$ sudo chown -R engineering Engineering 
+alifathan@alifathan-VirtualBox: $ sudo chown -R :hr HR 
+
+Mengubah Access Permissions
+alifathan@alifathan-VirtualBox:~$ sudo chmod -R 770 Marketing 
+alifathan@alifathan-VirtualBox:~$ sudo chmod -R 770 Engineering 
+alifathan@alifathan-VirtualBox:~$ sudo chmod -R 770 HR 
+alifathan@alifathan-VirtualBox:-$ ls -l
+
+#Mencari File Minggu Lalu
+
+alifathan@alifathan-VirtualBox:-$ find -name"*.pdf" -mtime -7
