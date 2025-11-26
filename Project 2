@@ -1,0 +1,23 @@
+#MEMBUAT FOLDER DAN SUBFOLDER 
+
+alifathan@alifathan-VirtualBox:-$ mkdir -p project2/{source_files, backup,logs} 
+alifathan@alifathan-VirtualBox:-$ cd project2/source_files
+
+#MEMBUAT FILE
+alifathan@alifathan-VirtualBox:~/project2/source_files $ echo "12345" > nomor.pdf 
+alifathan@alifathan-VirtualBox:~/project2/source_files $ echo "abcde" > huruf.txt 
+alifathan@alifathan-VirtualBox:~/project2/source_files$ ls
+huruf.txt nomor.pdf
+alifathan@alifathan-VirtualBox:~/project2/source_files$ cd .. 
+
+#PERINTAH NANO
+alifathan@alifathan-VirtualBox:~/project2$ nano backup.sh 
+alifathan@alifathan-VirtualBox:~/project2$ chmod +x backup.sh 
+alifathan@alifathan-VirtualBox:-/project2$ ./backup.sh
+Backup berhasil!
+file backup: backup_2025-11-26_12-46-53.tar.gz
+Lokasi penyimpanan: backup/
+alifathan@alifathan-VirtualBox:~/project2$ cat logs/backup.log
+Backup dijalankan pada 2025-11-26_12-46-53
+File berhasil dikompres ke folder backup.
+Wed Nov 26 12:46:53 PM WITA 2025 BERHASIL : Backup tersimpan sebagai backup/backup_2025-11-26_12-46-53.tar.gz
